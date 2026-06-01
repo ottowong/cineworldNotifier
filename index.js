@@ -1,5 +1,12 @@
 import fs from "fs";
-import "dotenv/config";
+import path from "path";
+import dotenv from "dotenv";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config({ path: path.join(__dirname, ".env") });
 
 const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 const CINEMA_ID = process.env.CINEMA_ID;
@@ -16,7 +23,7 @@ function getRating(attributeIds = []) {
   return rating ? rating.toUpperCase() : "tbc";
 }
 
-const STATE_FILE = "./state.json";
+const STATE_FILE = path.join(__dirname, "state.json");
 
 function addDays(dateStr, days) {
   const d = new Date(dateStr);
