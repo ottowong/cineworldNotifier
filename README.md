@@ -30,7 +30,7 @@ Find your CINEMA_ID here: https://www.cineworld.co.uk/uk/data-api-service/v1/qui
 | Variable | Required | Default | Description |
 |---|---|---|---|
 | `DISCORD_WEBHOOK_URL` | Yes |  | Discord webhook to post notifications to |
-| `CINEMA_ID` | Yes | 022 | Cineworld cinema ID |
+| `CINEMA_ID` | Yes | `022` | Cineworld cinema ID |
 | `TENANT_ID` | No | `10108` | Cineworld tenant ID | 
 
 ## Usage
