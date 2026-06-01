@@ -123,7 +123,6 @@ async function run() {
     }
   }
 
-  // REMOVED films
   for (const id of previousIds) {
     if (!currentIds.has(id)) {
       console.log("REMOVED:", state[id].name);
