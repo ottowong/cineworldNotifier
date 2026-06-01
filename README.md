@@ -44,7 +44,7 @@ node index.js
 To run on a schedule, add a cron job (e.g. every hour):
 
 ```
-0 * * * * cd /path/to/cineworldNotifier && node index.js
+0 * * * * /usr/bin/node /path/to/cineworldNotifier/index.js
 ```
 
 ## Stuff I might add in the future
